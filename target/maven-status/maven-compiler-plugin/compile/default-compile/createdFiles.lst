@@ -1,6 +1,0 @@
-com\biometrics\api\infrastructure\web\WorkoutController.class
-com\biometrics\api\domain\model\ExerciseSet.class
-com\biometrics\api\domain\service\VolumeCalculatorService.class
-com\biometrics\api\application\dto\MetricsResponseDTO.class
-com\biometrics\api\domain\model\WorkoutSession.class
-com\biometrics\api\BiometricsApiApplication.class

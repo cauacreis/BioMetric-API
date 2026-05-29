@@ -2,6 +2,12 @@
 # BioMetrics API - .gitignore
 # ========================
 
+# Maven build output (NUNCA versionar binários compilados)
+target/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
 # Dependências
 node_modules/
 vendor/
