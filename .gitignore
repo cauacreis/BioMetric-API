@@ -1,0 +1,65 @@
+# ========================
+# BioMetrics API - .gitignore
+# ========================
+
+# Dependências
+node_modules/
+vendor/
+
+# Ambiente virtual Python
+venv/
+.venv/
+env/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Variáveis de ambiente (NUNCA versionar!)
+.env
+.env.local
+.env.*.local
+
+# Configurações locais
+*.local.json
+config.local.*
+
+# Banco de dados local
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# Build / dist
+dist/
+build/
+out/
+
+# IDEs e editores
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Certificados e chaves (NUNCA versionar!)
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+
+# Cobertura de testes
+coverage/
+.coverage
+htmlcov/
+
+# Docker
+*.override.yml
