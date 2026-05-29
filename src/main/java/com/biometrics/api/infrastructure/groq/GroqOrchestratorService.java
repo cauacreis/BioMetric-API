@@ -72,7 +72,7 @@ public class GroqOrchestratorService {
     @Value("${groq.api.key}")
     private String groqApiKey;
 
-    @Value("${groq.model:llama3-8b-8192}")
+    @Value("${groq.model:llama-3.1-8b-instant}")
     private String groqModel;
 
     public GroqOrchestratorService(RestTemplate restTemplate, ObjectMapper objectMapper) {
