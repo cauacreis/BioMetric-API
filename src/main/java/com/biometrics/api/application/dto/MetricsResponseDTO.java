@@ -6,11 +6,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  * DTO de Resposta — MetricsResponseDTO.
  *
  * Pertence à camada de Application: faz a ponte entre o domínio e o mundo externo.
- * Encapsula o resultado do cálculo de volume e a mensagem do Orquestrador (mock).
- *
- * Usando Java Record para imutabilidade garantida em tempo de compilação.
+ * Agora inclui a decisão real do Treinador Virtual (LLM Groq).
  */
-@Schema(description = "Resposta da análise de métricas da sessão de treino")
+@Schema(description = "Resposta da análise de métricas da sessão de treino com decisão do Treinador Virtual")
 public record MetricsResponseDTO(
 
         @Schema(description = "ID do atleta analisado", example = "atleta-001")
@@ -28,17 +26,10 @@ public record MetricsResponseDTO(
         @Schema(description = "RPE registrado na sessão (1-10)", example = "8")
         Integer rpeSessao,
 
-        @Schema(description = "Número de sets analisados", example = "12")
+        @Schema(description = "Número de sets analisados", example = "8")
         Integer totalDeSets,
 
-        @Schema(
-            description = "Mensagem do Orquestrador LLM (mock até integração real)",
-            example = "Fadiga registrada. Aguardando Orquestrador LLM para decisão de Deload."
-        )
-        String mensagemOrquestrador
+        @Schema(description = "Decisão e justificativa geradas pelo Treinador Virtual (LLM Groq)")
+        LlmDecisionDTO decisaoTreinadorVirtual
 
-) {
-    /** Constante da mensagem mock do Orquestrador LLM — evita string literal duplicada. */
-    public static final String MSG_AGUARDANDO_LLM =
-            "Fadiga registrada. Aguardando Orquestrador LLM para decisão de Deload.";
-}
+) {}
